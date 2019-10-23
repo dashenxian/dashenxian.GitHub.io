@@ -1,0 +1,23 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Init Metadata",
+            "type": "shell",
+            "command": "${workspaceRoot}\\build\\mdinit.ps1",
+            "problemMatcher": []
+        },
+        {
+            "label": "Update Metadata",
+            "type": "shell",
+            "command": "${workspaceRoot}\\build\\mdupdate.ps1",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

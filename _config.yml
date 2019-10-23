@@ -1,0 +1,85 @@
+# Basic Site Information
+title: walterlv
+author: walterlv
+post_author: 小神仙
+description: 小神仙，.NET/Silverlight/Web 开发者
+mail: 123880321@qq.com
+about: .NET and Web Developer
+
+# Site Appearance
+logo: /assets/img/logo.png
+icon: /favicon.ico
+license:
+  img: /assets/img/by-nc-sa.svg
+default-theme: light
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Site Urls
+baseurl: ""
+url: "https://dashenxian.github.io"
+links:
+  - title: 博客
+    url: /
+  - title: 胡思乱想
+    url: /mind
+  - title: 朋友
+    url: /friends
+  - title: 开源项目
+    url: /projects
+  - title: 关于
+    url: /about/
+links-light:
+  - icon: users
+    title: 朋友
+    url: /friends
+  - icon: rss
+    title: RSS
+    url: /feed.xml
+
+# Social Accounts
+github:
+  username: dashenxian
+  link: https://github.com/dashenxian
+facebook:
+  username: 
+twitter:
+  username: 
+stackoverflow:
+  link: 
+
+
+# Post Settings
+excerpt_separator: ---
+paginate: 30
+per_page: 30
+paginate_path: "/blog/page:num/"
+collections:
+  articles:
+    output: true
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "小神仙"
+      permalink: "/post/:title.html"
+  - scope:
+      path: "_articles"
+      type: "articles"
+    values:
+      layout: "post"
+      author: "小神仙"
+      permalink: "/article/:title.html"
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+  - jemoji
+
+# Others
+exclude: ['package.json', 'src', 'node_modules']

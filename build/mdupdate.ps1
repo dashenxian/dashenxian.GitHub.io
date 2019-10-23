@@ -1,0 +1,1 @@
+dotnet build\mdmeta\mdmeta.dll wupdate --ignore-in-hour 6
