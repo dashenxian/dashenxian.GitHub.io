@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 关于吕毅
+title: 关于小神仙
 permalink: /about/
 ---
 
-![吕毅](/assets/img/avatar.png)
+![小神仙](/assets/img/avatar.png)
