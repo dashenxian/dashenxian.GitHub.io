@@ -10,7 +10,7 @@
 			"position: ${2|starter,knowledge,principle,problem|}",
 			"---",
 			"",
-			"${0:在此处编辑 blog.walterlv.com 的博客摘要}",
+			"${0:在此处编辑 dashenxian.github.io 的博客摘要}",
 			"",
 			"---",
 			"",
@@ -22,15 +22,15 @@
 			"",
 			"**参考资料**"
 		],
-		"description": "使用 blog.walterlv.com 专用的博客模板"
+		"description": "使用 dashenxian.github.io 专用的博客模板"
 	},
 	"Add toc to post": {
 		"scope": "markdown",
 		"prefix": "toc",
 		"body": [
-			"${author:walterlv}",
+			"${author:dashenxian}",
 			"欢迎访问 ${author}.com 的博客"
 		],
-		"description": "添加 walterlv 的博客的目录"
+		"description": "添加 dashenxian 的博客的目录"
 	}
 }
