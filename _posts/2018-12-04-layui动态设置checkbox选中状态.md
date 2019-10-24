@@ -5,6 +5,9 @@ date: 2018-11-27 14:14:08 +0800
 categories: MiniProfiler监控Asp.Net MVC5和EF性能
 position: problem
 ---
+
+---
+
 <div id="toc"></div>
 
 今天在使用jquery动态设置layui的checkbox元素的选中状态时始终只能取消选中，却不能重新勾选，点击勾选则没有问题，代码如下

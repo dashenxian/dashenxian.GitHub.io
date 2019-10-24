@@ -5,6 +5,9 @@ date: 2018-11-05 14:14:08 +0800
 categories: 随机数_随机字符串
 position: problem
 ---
+
+---
+
 <div id="toc"></div>
 
 ```c#
