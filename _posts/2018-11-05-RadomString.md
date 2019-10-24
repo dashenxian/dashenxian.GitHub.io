@@ -1,4 +1,12 @@
-```
+---
+title: "随机数_随机字符串"
+publishDate: 2018-11-05 14:26:00 +0800
+date: 2018-11-05 14:14:08 +0800
+categories: 随机数_随机字符串
+position: problem
+---
+
+```c#
 
         /// <summary>
         /// 获取随机字符串
