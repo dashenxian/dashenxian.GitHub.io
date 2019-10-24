@@ -1,7 +1,19 @@
-##1.  安装依赖包
+---
+title: "MiniProfiler监控Asp.Net MVC5和EF性能"
+publishDate: 2018-11-27 14:26:00 +0800
+date: 2018-11-27 14:14:08 +0800
+categories: MiniProfiler监控Asp.Net MVC5和EF性能
+position: problem
+---
+<div id="toc"></div>
+
+## 1.  安装依赖包
+
 在web项目打开nuget包管理器搜索 MiniProfiler.Mvc5和MiniProfiler.EF6安装。
-##2. 在Global.asax中添加配置代码
-``` 
+
+## 2. 在Global.asax中添加配置代码
+
+``` c#
 protected void Application_Start()
 {
     MiniProfiler.Configure(new MiniProfilerOptions
@@ -77,13 +89,21 @@ protected void Application_EndRequest()
     MiniProfiler.Current?.Stop(); // Be sure to stop the profiler!
 } 
 ```
-##3. 在web.config中添加js配置
+
+## 3. 在web.config中添加js配置
+
 ![](https://img2018.cnblogs.com/blog/208398/201811/208398-20181127132825309-1944424933.png)
-```
+
+```c#
 <add name="MiniProfiler" path="profiler/*" verb="*" type="System.Web.Routing.UrlRoutingModule" resourceType="Unspecified" preCondition="integratedMode" />
 ```
-##4. 在需要的页面添加显示监控代码（所有页面可以在layout.cshtml中添加）
-###4.1 添加命名空间
+
+## 4. 在需要的页面添加显示监控代码（所有页面可以在layout.cshtml中添加）
+
+### 4.1 添加命名空间
+
 `@using StackExchange.Profiling;`
-###4.2 在body块最后添加显示代码
+
+### 4.2 在body块最后添加显示代码
+
 `@MiniProfiler.Current.RenderIncludes(position: RenderPosition.Right, showTrivial: false, showTimeWithChildren: true)`
