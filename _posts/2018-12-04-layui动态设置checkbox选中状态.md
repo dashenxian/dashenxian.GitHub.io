@@ -1,8 +1,8 @@
 ---
-title: "MiniProfiler监控Asp.Net MVC5和EF性能"
-publishDate: 2018-11-27 14:26:00 +0800
-date: 2018-11-27 14:14:08 +0800
-categories: MiniProfiler监控Asp.Net MVC5和EF性能
+title: "layui动态设置checkbox选中状态"
+publishDate: 2018-12-04 14:26:00 +0800
+date: 2018-12-04  14:14:08 +0800
+categories: layui动态设置checkbox选中状态
 position: problem
 ---
 
