@@ -6,8 +6,7 @@ categories: abp_vue导入导出excel
 position: problem
 ---
 
-后端abp，前端vue导入excel，开始准备用直接用npoi，觉得要写太多的代码，就算从以前的复制粘贴也麻烦，所以偷懒直接用别人的轮子
-[Magicodes.IE](https://github.com/xin-lai/Magicodes.IE)。这样可以节省很多工作，根据实体生成excel模板、支持枚举、导入时自动验证数据是否合法（必填、类型等）
+后端abp，前端vue导入excel，开始准备用直接用npoi，觉得要写太多的代码，就算从以前的复制粘贴也麻烦，所以偷懒直接用别人的轮子[Magicodes.IE](https://github.com/xin-lai/Magicodes.IE)。这样可以节省很多工作，根据实体生成excel模板、支持枚举、导入时自动验证数据是否合法（必填、类型等）
 
 ---
 
