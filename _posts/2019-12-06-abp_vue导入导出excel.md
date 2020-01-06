@@ -63,9 +63,12 @@ public async Task<ActionResult> GetTemplate()
 
 XXXXImportExcelDto是导入的实体类型，具体定义方式可以见[https://github.com/xin-lai/Magicodes.IE](https://github.com/xin-lai/Magicodes.IE)
 
-如果你用的abp官方提供的vue项目，使用的axios请求后端，也就是ajax请求，这个文件流是不会弹出保存文件框的，需要在axios请求后拦截文件流弹出下载框。找到src\lib\ajax.ts文件,修改ajax.interceptors.response方法，并添加一个downloadUrl方法
+如果你用的abp官方提供的vue项目，使用的axios请求后端，也就是ajax请求，这个文件流是不会弹出保存文件框的，需要在axios请求后拦截文件流弹出下载框。找到src\lib\ajax.ts文件,修改ajax.interceptors.response方法，并添加一个downloadUrl方法,如果后端验证了权限（登录），那么这里下载请求会出错"Refused to display in a frame because it set 'X-Frame-Options' to 'sameorigin'"，要么取消后端权限（登录）验证，要么在url中把jwtToken带上，我选择带上token。
 
 ```diff
+++  import AppConsts from './appconst'
+++  import Util from './util'
+
 ajax.interceptors.response.use((respon)=>{    
 ++    //拦截文件下载请求
 ++    if (respon.headers && (respon.headers['content-type'] === 'application/octet-stream')) {
@@ -89,15 +92,46 @@ ajax.interceptors.response.use((respon)=>{
     return Promise.reject(error);
 })
 ++const downloadUrl = url => {
+++  var encryptedAuthToken = Util.abp.utils.getCookieValue(AppConsts.authorization.encrptedAuthTokenName);
 ++  let iframe = document.createElement('iframe')
 ++  iframe.style.display = 'none'
-++  iframe.src = url
+++  iframe.src = url+"?"+AppConsts.authorization.encrptedAuthTokenName + "=" + encodeURIComponent(encryptedAuthToken)
 ++  iframe.onload = function () {
 ++    document.body.removeChild(iframe)
 ++  }
 ++  document.body.appendChild(iframe)
 ++}
 ```
+
+后端 Web.Host.Startup.AuthConfigurer类中的QueryStringTokenResolver
+```diff
+    private static Task QueryStringTokenResolver(MessageReceivedContext context)
+    {
+--        if (!context.HttpContext.Request.Path.HasValue ||
+--            !context.HttpContext.Request.Path.Value.StartsWith("/signalr"))
+++        if (!context.HttpContext.Request.Path.HasValue
+++            || !(context.HttpContext.Request.Path.Value.StartsWith("/signalr")
+++                || context.HttpContext.Request.Path.Value.Contains("/GetTemplate"))
+++                )
+        {
+            // We are just looking for signalr clients
+            return Task.CompletedTask;
+        }
+
+        var qsAuthToken = context.HttpContext.Request.Query["enc_auth_token"].FirstOrDefault();
+        if (qsAuthToken == null)
+        {
+            // Cookie value does not matches to querystring value
+            return Task.CompletedTask;
+        }
+
+        // Set auth token from cookie
+        context.Token = SimpleStringCipher.Instance.Decrypt(qsAuthToken, AppConsts.DefaultPassPhrase);
+        return Task.CompletedTask;
+    }
+```
+
+
 
 ## 导入excel
 
