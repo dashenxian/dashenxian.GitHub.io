@@ -547,6 +547,8 @@ public async Task<AuthenticateResultModel> Authenticate([FromBody] AuthenticateM
 
 ---
 
+[原文](https://dashenxian.github.io/post/abp%E9%9B%86%E6%88%90IdentityServer4%E5%92%8C%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95.html)
+
 **参考资料**
 
 - [Identity Server Integration](https://aspnetboilerplate.com/Pages/Documents/Zero/Identity-Server)
