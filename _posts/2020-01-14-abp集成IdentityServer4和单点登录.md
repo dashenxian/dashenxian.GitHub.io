@@ -12,7 +12,7 @@ position: problem
 
 <div id="toc"></div>
 
-# 创建登录中心项目
+## 创建登录中心项目
 
 1. 到官网下载一个最新的模板项目，项目类型自选(我们项目用的vue，所以我选择的vue项目，.net core3.x)。保证可以运行起来并正常登录。
 2. 右键src目录添加一个asp.net core web 空项目，在项目中添加Startup文件夹，把Startup.cs和Program.cs移动到Startup文件夹，并修改这两个文件的命名空间增加Startup。不然会有命名空间和类名冲突。
@@ -327,7 +327,7 @@ namespace Abp.Ids4.Server.Startup
 最终项目结构如下：
 ![IdentityServer](../static/posts/2020-01-14-abp集成IdentityServer4和单点登录-01.png)
 
-# 修改Web.Core项目
+## 修改Web.Core项目
 
 从IdentityServerDemo项目复制IdentityServer目录和文件到xxx.Web.Core项目，修改文件中的命名空间和当前项目对应。修改IdentityServerRegistrar文件中的dbcontext，把直接引用dbcontext实例改成引用接口，如下：
 
@@ -345,7 +345,7 @@ public static void Register(IServiceCollection services, IConfigurationRoot conf
 }
 ```
 
-# EntityFrameworkCore项目及其他修改
+## EntityFrameworkCore项目及其他修改
 
 1. 按照Identity Server Integration文档修改EntityFrameworkCore项目和nuget添加引用，同时把项目因为没有引用包报错的添加引用。现在运行IdentityServer项目从connect/token中获取到token了，但是这个token还不能用。即使按照IdentityServerDemo配置了也用不了，IdentityServerDemo中实际上每个web项目都是登录中心。
 
