@@ -546,6 +546,7 @@ public async Task<AuthenticateResultModel> Authenticate([FromBody] AuthenticateM
 至此host项目的登录获取的token就是从登录中心获取的了，其他客户端的对接按照[使用Identity Server 4建立Authorization Server](https://www.cnblogs.com/cgzl/p/7780559.html)配置就可以了
 
 ---
+[源码：https://gitee.com/XiaoShenXiana/abp_ids4.git](https://gitee.com/XiaoShenXiana/abp_ids4.git)
 
 [原文](https://dashenxian.github.io/post/abp%E9%9B%86%E6%88%90IdentityServer4%E5%92%8C%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95.html)
 
