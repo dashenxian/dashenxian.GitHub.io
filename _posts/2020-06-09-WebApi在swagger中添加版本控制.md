@@ -2,7 +2,7 @@
 title: "Asp.Net WebApi在swagger中添加版本控制"
 publishDate: 0000-08-30 19:26:00 +0800
 date: 0000-10-22 19:14:08 +0800
-categories: wpf windows dotnet csharp
+categories: Asp.Net  dotnet csharp
 position: problem
 ---
 
