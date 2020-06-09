@@ -138,6 +138,34 @@ namespace WebApplication1
 
 ```
 
+## 在controller中标记版本
+
+现在可以再controller或者action上添加版本标记来标记版本了，如果没有标记的默认1.0，默认版本设置见代码
+
+```c#
+public class Controller1 : ApiController
+{
+    [ApiVersion("1.0")]
+    public async Task<string> Get(){
+        returt "1.0"
+    }
+    public async Task<string> Get2(){
+        returt "1.0"
+    }
+}
+public class Controller2 : ApiController
+{
+    [ApiVersion("2.0")]
+    public async Task<string> Get(){
+        returt "2.0"
+    }
+}
+```
+
+## 发送请求
+
+在请求中带上版本号标记，如果没有带版本则默认1.0，请求可以通过query参数或者header方式，名称为api-version，这个名称是在前述代码中配置的
+
 ## 可能遇到的问题
 
 1. swagger描述中的中文乱码，可以用vs新建一个SwaggerConfig，把原来SwaggerConfig中的内容拷过去，再删除自动创建的SwaggerConfig文件
