@@ -1,7 +1,7 @@
 ---
 title: "WebRequest下载文件"
-publishDate: 2020-06-24 19:26:00 +0800
-date: 2020-06-24 19:14:08 +0800
+publishDate: 2020-06-29 19:26:00 +0800
+date: 2020-06-29 19:14:08 +0800
 categories: CSharp Http Web WebRequest
 position: problem
 ---
