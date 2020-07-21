@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: page
 title: 朋友和收藏
 permalink: /friends/
@@ -253,4 +253,4 @@ https://blog.csdn.net/lzl1918/rss/list
 http://feed.cnblogs.com/blog/u/481512/rss
 http://feed.cnblogs.com/blog/u/261865/rss
 https://codedefault.com/rss/sn.xml
-https://blog.csdn.net/norsd/rss/list 
+https://blog.csdn.net/norsd/rss/list  -->
