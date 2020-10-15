@@ -105,3 +105,4 @@ jobs:
 
 - [GitHub Actions 入门教程](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
 - [配置参考](https://cli.vuejs.org/zh/config/#devserver)
+- [Deploy to GitHub Pages](https://github.com/marketplace/actions/deploy-to-github-pages)
