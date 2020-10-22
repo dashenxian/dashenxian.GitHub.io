@@ -1,9 +1,9 @@
-<!-- ---
+
 layout: page
 title: 朋友和收藏
 permalink: /friends/
 ---
-
+<!-- ---
 ## [dotnet职业技术学院](https://dotnet-campus.github.io/)成员
 
 - [林德熙 https://blog.lindexi.com/](https://blog.lindexi.com/)  
